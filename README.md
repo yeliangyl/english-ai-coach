@@ -116,3 +116,42 @@ Create an empty repository on GitHub and follow GitHub's displayed commands to a
 ## License
 
 No license is included yet. Add a license only after choosing the terms under which you want others to use or redistribute the project.
+
+
+## macOS
+
+### Requirements
+
+- Python 3
+- An OpenAI API key
+
+### Quick setup
+
+After cloning the repository:
+
+```bash
+cd english-ai-coach
+chmod +x setup_macos.sh start_macos.sh
+./setup_macos.sh
+```
+
+Set your OpenAI API key for the current Terminal session:
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
+
+Then start the app:
+
+```bash
+./start_macos.sh
+```
+
+To make the API key available in future Terminal sessions, add the export command to your shell profile (for example `~/.zshrc`) and reopen Terminal. Never commit your real API key to GitHub.
+
+You can also start the app manually:
+
+```bash
+source .venv/bin/activate
+python -m streamlit run app.py
+```
